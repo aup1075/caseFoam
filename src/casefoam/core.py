@@ -293,10 +293,10 @@ class CaseFoamStructure(CaseFoamManipulator, ParsedParameterFile):
             Seperator for flat folder hierarchy.
 
         """
-        if hierarchy is 'flat':
+        if hierarchy == 'flat':
             relCaseDir = seperator.join(case)
             self.caseDir = os.path.join(self.baseCase, relCaseDir)
-        elif hierarchy is 'tree':
+        elif hierarchy == 'tree':
             relCaseDir = os.sep.join(case)
             self.caseDir = os.path.join(self.baseCase, relCaseDir)
         else:
